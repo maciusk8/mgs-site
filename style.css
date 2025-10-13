@@ -139,17 +139,15 @@ nav a:hover, nav a.active {
     box-shadow: 0 0 20px rgb(50,50,50);
 }
 .character-hover {
-    position: relative; /* Kluczowe dla pozycjonowania obrazka wewnątrz */
-    font-weight: 700;   /* Opcjonalnie: pogrubia imię postaci */
-    color: var(--accent-color); /* Opcjonalnie: wyróżnia imię kolorem */
+    position: relative; 
+    font-weight: 700;  
+    color: var(--accent-color);
 }
 
-/* Styl ukrytego obrazka-podglądu */
 .character-hover img {
-    /* Ukrycie i wygląd */
-    visibility: hidden; /* Domyślnie ukryty */
+    visibility: hidden; 
     opacity: 0;
-    width: 300px; /* Szerokość podglądu */
+    width: 300px; 
     border: 2px solid var(--accent-color);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
@@ -264,7 +262,7 @@ nav a:hover, nav a.active {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding-top: 56.25%; /* To jest kluczowe: proporcje 16:9 (9 / 16 * 100) */
+    padding-top: 56.25%; 
 }
 
 .video-container iframe {
@@ -278,18 +276,59 @@ nav a:hover, nav a.active {
 
 
 @media (max-width: 768px) {
+    body {
+        padding: 5px;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 100%;
+        border-radius: 10px;
+    }
+
     header {
         flex-direction: column;
         text-align: center;
+        gap: 15px;
+        margin: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 2em;
     }
 
     nav ul {
-        margin-top: 20px;
+        margin-top: 10px;
         flex-direction: column;
         width: 100%;
+        gap: 10px; 
     }
     
     nav li {
-        margin: 10px 0;
+        margin: 0;
+    }
+
+    nav a {
+        display: block; 
+        text-align: center;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    .main-content {
+        padding: 20px 15px; 
+        margin-bottom: 20px;
+    }
+
+    .main-content h2 {
+        font-size: 1.6em;
+        padding: 10px;
+    }
+    
+    .gallery-item {
+        width: 90%; 
+        max-width: 300px; 
     }
 }
